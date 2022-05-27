@@ -11,7 +11,7 @@ function Navbar() {
       <div className="md:hidden">
         <HamburgerIcon />
       </div>
-      <div className="z-10 ml-[64px] mr-[700px] hidden h-[1px] w-full bg-white/50 lg:inline"></div>
+      <div className="z-10 ml-[55px] mr-[725px] hidden h-[1px] w-full bg-white/50 lg:inline"></div>
       <nav className="absolute right-0 top-0 hidden h-[96px] space-x-12 bg-primary-800 px-[46px] font-secondary text-[14px] uppercase tracking-[2.36px] text-white md:flex md:items-center lg:bg-[#979797]/20 lg:pr-[165px] lg:pl-[123px] lg:text-[16px] lg:backdrop-blur-md">
         <div className="flex h-full items-center border-b-[3px] border-transparent transition-all duration-300 ease-out hover:cursor-pointer hover:border-b-white/50 active:border-b-white">
           <span className="mr-[11px] hidden font-bold lg:inline-block">00</span>
