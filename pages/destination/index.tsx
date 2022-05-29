@@ -1,7 +1,14 @@
-import React, { useState } from 'react'
+import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 import Navigation from '../../components/Destination/Navigation'
 import Navbar from '../../components/Navbar/Navbar'
 import SectionTitle from '../../components/UI/SectionTitle'
+
+import data from './destinationData.json'
+import moonImage from '../../public/assets/destination/image-moon.png'
+import marsImage from '../../public/assets/destination/image-mars.png'
+import europaImage from '../../public/assets/destination/image-europa.png'
+import titanImage from '../../public/assets/destination/image-titan.png'
 
 const menu = [
   { destination: 'moon' },
@@ -10,8 +17,24 @@ const menu = [
   { destination: 'titan' },
 ]
 
+const destinationDetails = [
+  { ...data[0], img: moonImage },
+  { ...data[1], img: marsImage },
+  { ...data[2], img: europaImage },
+  { ...data[3], img: titanImage },
+]
+
 function Destination() {
   const [destination, setDestination] = useState('moon')
+  const [destinationData, setDestinationData] = useState(destinationDetails[0])
+
+  useEffect(() => {
+    const newData = destinationDetails.find(
+      (object) => object.name === destination
+    )
+
+    newData && setDestinationData(newData)
+  }, [destination])
 
   const onNavigationClickHanlder = (option: string) => {
     setDestination(option)
@@ -22,16 +45,27 @@ function Destination() {
       <Navbar />
       <main className="mt-[66px] flex flex-col justify-center">
         <SectionTitle />
-
-        {/* Image */}
-
+        <Image src={destinationData.img} width="300px" height="300px" />
         <Navigation
           active={destination}
           menu={menu}
           onClick={onNavigationClickHanlder}
         />
-
-        {/* Destination */}
+        <section>
+          <h1 className="text-white">{destination}</h1>
+          <p className="text-white">{destinationData.description}</p>
+        </section>
+        <div></div>
+        <section>
+          <section>
+            <h1 className="text-secondary-100">Avg. Distance</h1>
+            <p className="text-white">{destinationData.distance}</p>
+          </section>
+          <section>
+            <h1 className="text-secondary-100">Est. Travel Time</h1>
+            <p className="text-white">{destinationData.travel_time}</p>
+          </section>
+        </section>
       </main>
     </div>
   )
