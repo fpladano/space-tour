@@ -43,27 +43,41 @@ function Destination() {
   return (
     <div className="min-w-screen min-h-screen bg-[url('/assets/destination/background-destination-mobile.jpg')] bg-cover p-6 md:bg-[url('/assets/destination/background-destination-tablet.jpg')] md:px-[162px] lg:bg-[url('/assets/destination/background-destination-desktop.jpg')]">
       <Navbar />
-      <main className="mt-[66px] flex flex-col justify-center">
+      <main className="mt-[66px] flex flex-col items-center">
         <SectionTitle />
-        <Image src={destinationData.img} width="300px" height="300px" />
+        <div className="mb-[36px] h-[170px] w-[170px]">
+          <Image src={destinationData.img} />
+        </div>
         <Navigation
           active={destination}
           menu={menu}
           onClick={onNavigationClickHanlder}
         />
-        <section>
-          <h1 className="text-white">{destination}</h1>
-          <p className="text-white">{destinationData.description}</p>
+        <section className="mt-[20px] text-center">
+          <h1 className="font-primary text-[56px] uppercase text-white">
+            {destination}
+          </h1>
+          <p className="font-paragraph text-[15px] leading-[25px] text-secondary-100">
+            {destinationData.description}
+          </p>
         </section>
-        <div></div>
+        <div className="my-[32px] h-[1px] w-full bg-primary-700"></div>
         <section>
-          <section>
-            <h1 className="text-secondary-100">Avg. Distance</h1>
-            <p className="text-white">{destinationData.distance}</p>
+          <section className="mb-[32px]">
+            <h1 className="mb-[12px] text-center font-secondary  text-[16px] uppercase tracking-[2.36px]  text-secondary-100">
+              Avg. Distance
+            </h1>
+            <p className="text-center font-primary text-[28px] uppercase text-white">
+              {destinationData.distance}
+            </p>
           </section>
           <section>
-            <h1 className="text-secondary-100">Est. Travel Time</h1>
-            <p className="text-white">{destinationData.travel_time}</p>
+            <h1 className="mb-[12px] text-center font-secondary  text-[16px] uppercase tracking-[2.36px] text-secondary-100">
+              Est. Travel Time
+            </h1>
+            <p className="text-center font-primary text-[28px] uppercase text-white">
+              {destinationData.travel_time}
+            </p>
           </section>
         </section>
       </main>
