@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar/Navbar'
 
 const Home: NextPage = () => {
   return (
-    <div className="min-w-screen min-h-screen bg-[url('/assets/home/background-home-mobile.jpg')] bg-cover p-6 md:bg-[url('/assets/home/background-home-tablet.jpg')] md:px-[162px] lg:bg-[url('/assets/home/background-home-desktop.jpg')]">
+    <div className="min-w-screen min-h-screen bg-[url('/assets/home/background-home-mobile.jpg')] bg-cover p-6 px-0 md:bg-[url('/assets/home/background-home-tablet.jpg')] md:px-[162px] lg:bg-[url('/assets/home/background-home-desktop.jpg')]">
       <Head>
         <title>Space Tour</title>
         <link rel="icon" href="/favicon.ico" />

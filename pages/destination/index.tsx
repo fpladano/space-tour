@@ -41,11 +41,11 @@ function Destination() {
   }
 
   return (
-    <div className="min-w-screen min-h-screen bg-[url('/assets/destination/background-destination-mobile.jpg')] bg-cover p-6 md:bg-[url('/assets/destination/background-destination-tablet.jpg')] md:px-[162px] lg:bg-[url('/assets/destination/background-destination-desktop.jpg')]">
+    <div className="min-w-screen md:[38.5px] min-h-screen bg-[url('/assets/destination/background-destination-mobile.jpg')] bg-cover p-6 md:bg-[url('/assets/destination/background-destination-tablet.jpg')] lg:bg-[url('/assets/destination/background-destination-desktop.jpg')]">
       <Navbar />
-      <main className="mt-[66px] flex flex-col items-center">
+      <main className="mt-[66px] md:m-auto md:mt-[136px] md:max-w-[537px]">
         <SectionTitle />
-        <div className="mb-[36px] h-[170px] w-[170px]">
+        <div className="mx-auto mb-[36px] h-[170px] w-[170px] md:h-[300px] md:w-[300px]">
           <Image src={destinationData.img} />
         </div>
         <Navigation
@@ -54,16 +54,16 @@ function Destination() {
           onClick={onNavigationClickHanlder}
         />
         <section className="mt-[20px] text-center">
-          <h1 className="font-primary text-[56px] uppercase text-white">
+          <h1 className="font-primary text-[56px] uppercase text-white md:text-[80px]">
             {destination}
           </h1>
-          <p className="font-paragraph text-[15px] leading-[25px] text-secondary-100">
+          <p className="font-paragraph text-[15px] leading-[25px] text-secondary-100 md:text-[16px]">
             {destinationData.description}
           </p>
         </section>
         <div className="my-[32px] h-[1px] w-full bg-primary-700"></div>
-        <section>
-          <section className="mb-[32px]">
+        <section className="flex flex-col space-y-[32px] md:flex-row md:justify-center md:space-y-0 md:space-x-[68px]">
+          <section className="">
             <h1 className="mb-[12px] text-center font-secondary  text-[16px] uppercase tracking-[2.36px]  text-secondary-100">
               Avg. Distance
             </h1>
