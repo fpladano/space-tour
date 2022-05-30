@@ -14,7 +14,7 @@ function CrewNavigation({ menu, onClick }: Props) {
   }
 
   return (
-    <nav className="flex justify-center space-x-8 lg:justify-start">
+    <nav className="flex justify-center space-x-4 lg:justify-start">
       {menu.map((item, index) => {
         return (
           <button
