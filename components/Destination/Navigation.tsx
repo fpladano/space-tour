@@ -15,7 +15,7 @@ function Navigation({ active, menu, onClick }: Props) {
   }
 
   return (
-    <nav className="flex justify-center space-x-8">
+    <nav className="flex justify-center space-x-8 lg:justify-start">
       {menu.map((item, index) => {
         return (
           <div key={index}>
