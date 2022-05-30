@@ -42,7 +42,7 @@ function Destination() {
   return (
     <div className="min-w-screen md:[38.5px] min-h-screen bg-[url('/assets/destination/background-destination-mobile.jpg')] bg-cover p-6 md:bg-[url('/assets/destination/background-destination-tablet.jpg')] lg:bg-[url('/assets/destination/background-destination-desktop.jpg')]">
       <Navbar />
-      <main className="mt-[66px] md:m-auto md:mt-[136px] md:max-w-[537px] lg:flex lg:max-w-none lg:justify-between lg:px-[163px]">
+      <main className="mt-[66px] md:m-auto md:mt-[136px] md:max-w-[537px] lg:flex lg:max-w-[1200px] lg:justify-between lg:px-6">
         <div>
           <SectionTitle />
           <div className="mx-auto mb-[36px] h-[170px] w-[170px] md:h-[300px] md:w-[300px] lg:ml-[64px] lg:h-[445px] lg:w-[445px]">
