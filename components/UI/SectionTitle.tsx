@@ -14,7 +14,11 @@ function SectionTitle() {
   const index = titles.findIndex((element) => element.path === route.pathname)
   const title = titles.find((element) => element.path === route.pathname)
   return (
-    <h1 className="leading-auto mb-[32px] text-center font-secondary text-[16px] uppercase tracking-[2.7px] text-white md:mb-[60px] md:text-justify md:text-[20px] lg:mb-[97px] lg:text-[28px] lg:tracking-[4.72px]">
+    <h1
+      className={`leading-auto mb-[32px] text-center font-secondary text-[16px] uppercase tracking-[2.7px] text-white md:text-justify md:text-[20px] lg:mb-[97px] lg:text-[28px] lg:tracking-[4.72px] ${
+        route.pathname === '/crew' ? 'md:mb-[10px]' : 'md:mb-[60px]'
+      }`}
+    >
       <span className="mr-[18px] font-bold text-[#979797]">0{index}</span>
       {title?.text}
     </h1>

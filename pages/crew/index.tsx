@@ -34,26 +34,32 @@ function index() {
       <Navbar />
       <main className="mt-[66px] flex flex-col md:m-auto md:mt-[136px] md:max-w-[537px] lg:flex lg:max-w-none lg:justify-between lg:px-[163px]">
         <SectionTitle />
-        <div className="relative mx-auto h-[223px] w-[327px]">
-          <Image src={crewMember.img} layout="fill" objectFit="scale-down" />
-        </div>
-        <div className="h-[1px] w-full bg-[#979797]/25"></div>
-        <section className="mt-[33px]">
-          {/* Navigation */}
-          <CrewNavigation menu={menu} onClick={onNavigationClickHanlder} />
-          {/* Description */}
-          <section className="mt-[32px] text-center">
-            <h2 className="mb-[8px] font-primary uppercase text-white/50">
-              {crewMember.role}
-            </h2>
-            <h1 className="mb-[16px] font-primary text-[24px] uppercase text-white">
-              {crewMember.name}
-            </h1>
-            <p className="font-paragraph leading-[25px] text-secondary-100">
-              {crewMember.description}
-            </p>
+        <div className="md:flex md:flex-col-reverse lg:flex-row-reverse">
+          <div className="relative mx-auto h-[223px] w-[327px] md:h-[572px] md:w-[457px] lg:h-[704px] lg:w-[504px]">
+            <Image src={crewMember.img} layout="fill" objectFit="contain" />
+          </div>
+          <div className="h-[1px] w-full bg-[#979797]/25 md:hidden"></div>
+          <section className="mt-[33px] flex flex-col md:flex-col-reverse lg:justify-end">
+            {/* Navigation */}
+            <CrewNavigation
+              menu={menu}
+              onClick={onNavigationClickHanlder}
+              active={crewMember.role}
+            />
+            {/* Description */}
+            <section className="mt-[32px] mb-[104px] text-center md:mt-0 md:mb-[40px] lg:max-w-[500px] lg:text-justify">
+              <h2 className="mb-[8px] font-primary uppercase text-white/50 md:text-[24px] lg:text-[32px]">
+                {crewMember.role}
+              </h2>
+              <h1 className="mb-[16px] font-primary text-[24px] uppercase text-white md:text-[40px] lg:text-[56px]">
+                {crewMember.name}
+              </h1>
+              <p className="lg:text-[18] font-paragraph leading-[25px] text-secondary-100 md:leading-[28px] lg:leading-[32px]">
+                {crewMember.description}
+              </p>
+            </section>
           </section>
-        </section>
+        </div>
       </main>
     </div>
   )
