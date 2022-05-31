@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           <h1 className="mb-[16px] font-primary text-[80px] uppercase leading-[100px] text-white md:mb-[24px] md:text-[150px] md:leading-[150px]">
             Space
           </h1>
-          <p className=" font-paragraph text-[15px] leading-[25px] text-secondary-100 md:text-[16px] md:leading-[28px] lg:text-[18px] lg:leading-[32px]">
+          <p className="font-paragraph text-[15px] leading-[25px] text-secondary-100 md:text-[16px] md:leading-[28px] lg:text-[18px] lg:leading-[32px]">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
