@@ -35,10 +35,10 @@ function index() {
   return (
     <div className="min-w-screen min-h-screen bg-[url('/assets/technology/background-technology-mobile.jpg')] bg-cover md:bg-[url('/assets/technology/background-technology-tablet.jpg')] lg:bg-[url('/assets/technology/background-technology-desktop.jpg')]">
       <Navbar />
-      <div className="pt-[88px] md:pt-[136px] md:pl-[38.5px]">
+      <div className="pt-[88px] md:pt-[136px] md:pl-[38.5px] lg:pt-[212px] lg:pl-[64px]">
         <SectionTitle />
       </div>
-      <main className="flex flex-col items-center space-y-6 md:space-y-12  lg:flex-row-reverse lg:justify-between lg:space-y-0 lg:pl-[50px]">
+      <main className="flex flex-col items-center space-y-6 md:space-y-12  lg:relative lg:top-[-90px] lg:flex-row-reverse lg:justify-between lg:space-y-0 lg:pl-[50px]">
         <div className="w-full lg:hidden">
           <Image src={technology.landscape} layout="responsive" />
         </div>
