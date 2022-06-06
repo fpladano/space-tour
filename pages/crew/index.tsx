@@ -30,13 +30,18 @@ function index() {
   }
 
   return (
-    <div className="min-w-screen md:[38.5px] min-h-screen bg-[url('/assets/crew/background-crew-mobile.jpg')] bg-cover p-6 md:bg-[url('/assets/crew/background-crew-tablet.jpg')] lg:bg-[url('/assets/crew/background-crew-desktop.jpg')]">
+    <div className="min-w-screen md:[38.5px] min-h-screen bg-[url('/assets/crew/background-crew-mobile.jpg')] bg-cover p-6 md:bg-[url('/assets/crew/background-crew-tablet.jpg')] md:pb-0 lg:bg-[url('/assets/crew/background-crew-desktop.jpg')]">
       <Navbar />
       <main className="mt-[66px] flex flex-col md:m-auto md:mt-[136px] md:max-w-[537px] lg:flex lg:max-w-none lg:justify-between lg:px-[163px]">
         <SectionTitle />
         <div className="md:flex md:flex-col-reverse lg:flex-row-reverse">
-          <div className="relative mx-auto h-[223px] w-[327px] md:h-[572px] md:w-[457px] lg:h-[704px] lg:w-[504px]">
-            <Image src={crewMember.img} layout="fill" objectFit="contain" />
+          <div className="relative mx-auto h-[223px] w-[227px] md:mt-[3rem] md:h-[572px] md:w-[457px] lg:h-[604px] lg:w-[504px]">
+            <Image
+              src={crewMember.img}
+              layout="fill"
+              objectFit="fill"
+              objectPosition="center"
+            />
           </div>
           <div className="h-[1px] w-full bg-[#979797]/25 md:hidden"></div>
           <section className="mt-[33px] flex flex-col md:flex-col-reverse lg:justify-end">
